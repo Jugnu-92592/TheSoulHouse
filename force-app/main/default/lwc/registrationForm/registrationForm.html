@@ -1,0 +1,265 @@
+<!--
+========================================================
+Component : registrationForm
+Project   : The Soul House
+Purpose   : Magnet Registration Page
+Author    : Jugnu Rana
+========================================================
+-->
+
+<template>
+
+    <div class="registration-container">
+
+        <div class="registration-card">
+<h1 class="main-title" style="text-align: center; margin-bottom: 20px;">
+                        Registration form 
+                    </h1>
+            <div class="registration-content">
+                
+
+                <!-- Logo Section -->
+
+                <div class="logo-section">
+
+                    <img src={logoUrl} alt="The Soul House Logo" class="logo"/>
+
+                    <h1  class="main-title">
+                        THE SOUL HOUSE 
+                    </h1>
+
+                    <p class="sub-title">
+                        Your Spiritual Center
+                    </p>
+
+                    <div class="divider"></div>
+
+                    <p class="quote">
+                        "Know Yourself, Heal Yourself, Transform Yourself."
+                    </p>
+
+                </div>
+
+                <!-- Registration Form -->
+
+                <div class="slds-grid slds-wrap slds-gutters">
+
+                    <!-- First Name -->
+
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2">
+
+                        <lightning-input
+                            label="First Name"
+                            name="firstName"
+                            required
+                            value={member.firstName}
+                            onchange={handleInputChange}>
+                        </lightning-input>
+
+                    </div>
+
+                    <!-- Middle Name -->
+
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2">
+
+                        <lightning-input
+                            label="Middle Name"
+                            name="middleName"
+                            value={member.middleName}
+                            onchange={handleInputChange}>
+                        </lightning-input>
+
+                    </div>
+
+                    <!-- Last Name -->
+
+                    <div class="slds-col slds-size_1-of-1">
+
+                        <lightning-input
+                            label="Last Name"
+                            name="lastName"
+                            value={member.lastName}
+                            onchange={handleInputChange}
+                            required>
+                        </lightning-input>
+
+                    </div>
+
+                    <!-- Email -->
+
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2">
+
+                        <lightning-input
+                            type="email"
+                            label="Email"
+                            name="email"
+                            value={member.email}
+                            onchange={handleInputChange}
+                            required>
+                        </lightning-input>
+
+                    </div>
+
+                    <!-- Mobile -->
+
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2">
+
+                        <lightning-input
+                            type="tel"
+                            label="Mobile"
+                            name="mobile"
+                            data-field="mobile"
+                            value={member.mobile}
+                            onchange={handleInputChange}
+                            required>
+                        </lightning-input>
+
+                    </div>
+
+                    <!-- Gender -->
+
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2">
+
+                        <lightning-combobox
+                            label="Gender"
+                            name="gender"
+                            value={member.gender}
+                            options={genderOptions}
+                            onchange={handleInputChange}>
+                        </lightning-combobox>
+
+                    </div>
+
+                    <!-- Date Of Birth -->
+
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2">
+
+                        <lightning-input
+                            type="date"
+                            label="Date of Birth"
+                            name="dateOfBirth"
+                            value={member.dateOfBirth}
+                            onchange={handleInputChange}>
+                        </lightning-input>
+
+                    </div>
+
+                    <!-- Aadhar Number -->
+
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2">
+
+                        <lightning-input
+                            type="text"
+                            label="Aadhar Number"
+                            name="aadhaarNumber"
+                            data-field="aadhaarNumber"
+                            maxlength="12"
+                            inputmode="numeric"
+                            value={member.aadhaarNumber}
+                            onchange={handleInputChange}>
+                        </lightning-input>
+
+                    </div>
+
+                    <!-- Pan Number -->
+
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2">
+
+                        <lightning-input
+                            type="text"
+                            label="Pan Number"
+                            name="panNumber"
+                            data-field="panNumber"
+                            maxlength="10"
+                            value={member.panNumber}
+                            onchange={handleInputChange}>
+                        </lightning-input>
+
+                    </div>
+
+                    <!-- Address -->
+
+                    <div class="slds-col slds-size_1-of-1">
+
+                        <lightning-textarea
+                            label="Address"
+                            name="address"
+                            value={member.address}
+                            onchange={handleInputChange}>
+                        </lightning-textarea>
+
+                    </div>
+
+                    <!-- City -->
+
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-3">
+
+                        <lightning-input
+                            label="City"
+                            name="city"
+                            value={member.city}
+                            onchange={handleInputChange}>
+                        </lightning-input>
+
+                    </div>
+
+                    <!-- State -->
+
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-3">
+
+                        <lightning-input
+                            label="State"
+                            name="state"
+                            value={member.state}
+                            onchange={handleInputChange}>
+                        </lightning-input>
+
+                    </div>
+
+                    <!-- Country -->
+
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-3">
+
+                        <lightning-input
+                            label="Country"
+                            name="country"
+                            value={member.country}
+                            onchange={handleInputChange}>
+                        </lightning-input>
+
+                    </div>
+
+                </div>
+
+                <!-- Register Button -->
+
+                <div class="button-section">
+
+                    <lightning-button
+                        label="Register"
+                        variant="brand"
+                        class="register-button"
+                        onclick={handleRegister}>
+                    </lightning-button>
+
+                </div>
+
+                <!-- Login Link -->
+
+                <div class="login-section">
+
+                    Already a Magnet?
+
+                    <a href="#">
+                        Sign In
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</template>

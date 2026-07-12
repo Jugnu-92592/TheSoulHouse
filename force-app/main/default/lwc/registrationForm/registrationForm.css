@@ -1,0 +1,199 @@
+/*
+========================================================
+Component : registrationForm
+Project   : The Soul House
+Purpose   : Registration Page Styling
+========================================================
+*/
+
+:host {
+
+    display: block;
+
+    min-height: 100vh;
+
+    background: linear-gradient(
+        180deg,
+        #FFFDF4 0%,
+        #FFF8E1 100%
+    );
+
+    padding: 40px 20px;
+
+}
+
+/* Main Container */
+
+.registration-container{
+
+    max-width:760px;
+
+    margin:auto;
+
+}
+
+/* Card */
+
+.registration-card{
+
+    background:#FFFFFF;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+
+    border:1px solid #F1E4BE;
+
+}
+
+/* Content */
+
+.registration-content{
+
+    width:100%;
+
+}
+
+/* Logo */
+
+.logo-section{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+.logo{
+
+    width:160px;
+
+    margin-bottom:18px;
+
+}
+
+/* Title */
+
+.main-title{
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:#5D4037;
+
+    letter-spacing:2px;
+
+    margin:0;
+
+}
+
+/* Subtitle */
+
+.sub-title{
+
+    margin-top:8px;
+
+    font-size:18px;
+
+    color:#8D6E63;
+
+}
+
+/* Divider */
+
+.divider{
+
+    width:80px;
+
+    height:3px;
+
+    background:#D4AF37;
+
+    margin:20px auto;
+
+    border-radius:50px;
+
+}
+
+/* Quote */
+
+.quote{
+
+    color:#757575;
+
+    font-style:italic;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+}
+
+/* Form */
+
+.slds-grid{
+
+    margin-top:15px;
+
+}
+
+/* Button */
+
+.button-section{
+
+    margin-top:35px;
+
+    text-align:center;
+
+}
+
+/* Login */
+
+.login-section{
+
+    text-align:center;
+
+    margin-top:30px;
+
+}
+
+.login-section a{
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.login-section a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .registration-card{
+
+        padding:24px;
+
+    }
+
+    .logo{
+
+        width:120px;
+
+    }
+
+    .main-title{
+
+        font-size:28px;
+
+    }
+
+}
